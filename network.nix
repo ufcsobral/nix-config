@@ -1,6 +1,9 @@
 { lib, ... }:
 
 {
+  # https://nlewo.github.io/nixos-manual-sphinx/configuration/ipv6-config.xml.html#ipv6-configuration
+  networking.enableIPv6 = lib.mkDefault false;
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
