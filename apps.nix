@@ -9,6 +9,7 @@
     git
     google-chrome
     home-manager
+    libreoffice
     nanorc
     service-wrapper
     telegram-desktop
