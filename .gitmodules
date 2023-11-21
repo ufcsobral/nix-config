@@ -1,0 +1,3 @@
+[submodule "almino"]
+	path = almino
+	url = https://github.com/almino/ufcsobral-nix.git
