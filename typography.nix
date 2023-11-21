@@ -6,8 +6,7 @@
   # https://nixos.wiki/wiki/Fonts#Installing_fonts_on_NixOS
   fonts.fonts = with pkgs; [
     caladea # A serif font metric-compatible with Microsoft Cambria
-    # A sans-serif font metric-compatible with Microsoft Calibri
-    carlito
+    carlito # A sans-serif font metric-compatible with Microsoft Calibri
     cascadia-code # https://github.com/microsoft/cascadia-code
     corefonts # Microsoft's TrueType core fonts for the Web
     dina-font
@@ -15,9 +14,8 @@
     fira-code
     fira-code-symbols
     hasklig
-    liberation-sans-narrow # Liberation Sans Narrow Font Family is a replacement for Arial Narrow
     liberation_ttf # Liberation Fonts, replacements for Times New Roman, Arial, and Courier New
-    nerdfonts
+    liberation-sans-narrow # Liberation Sans Narrow Font Family is a replacement for Arial Narrow
     noto-fonts
     noto-fonts-emoji
     proggyfonts
