@@ -9,10 +9,11 @@
     # Include the results of the hardware scan.
     /etc/nixos/hardware-configuration.nix
     ./almino
+    ./este-pc
     ./apps.nix
     ./gnome.nix
     ./network.nix
-    ./este-pc
+    ./typography.nix
   ];
 
   # Bootloader.
