@@ -17,15 +17,15 @@
     ./typography.nix
   ];
 
+  # Configure console keymap
+  console.keyMap = "br-abnt2";
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Enable networking
-  networking.networkmanager.enable = true;
-
-  # Set your time zone.
-  time.timeZone = "America/Fortaleza";
+  networking.networkmanager.enable = lib.mkDefault true;
 
   # Select internationalisation properties.
   i18n.defaultLocale = "pt_BR.UTF-8";
@@ -42,6 +42,29 @@
     LC_TIME = "pt_BR.UTF-8";
   };
 
+  # Enable touchpad support (enabled default in most desktopManager).
+  # services.xserver.libinput.enable = true;
+
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = lib.mkDefault true;
+
+  # https://nixos.wiki/wiki/Storage_optimization
+  nix.settings.auto-optimise-store = lib.mkDefault true;
+
+  # Some programs need SUID wrappers, can be configured further or are
+  # started in user sessions.
+  # programs.mtr.enable = true;
+  # programs.gnupg.agent = {
+  #   enable = true;
+  #   enableSSHSupport = true;
+  # };
+
+  # https://flatpak.org/setup/NixOS
+  services.flatpak.enable = lib.mkDefault true;
+
+  # Enable CUPS to print documents.
+  services.printing.enable = lib.mkDefault true;
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
@@ -53,25 +76,16 @@
     xkbVariant = "";
   };
 
-  # Configure console keymap
-  console.keyMap = "br-abnt2";
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
+  # https://nixos.org/manual/nixos/stable/options#opt-system.activationScripts
+  # system.activationScripts = {
+  #   visitante = "passwd -d visitante";
   # };
+
+  # https://nixos.org/manual/nixos/stable/#sec-upgrading-automatic
+  system.autoUpgrade.enable = lib.mkDefault true;
+
+  # Set your time zone.
+  time.timeZone = "America/Fortaleza";
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
