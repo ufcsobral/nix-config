@@ -15,6 +15,7 @@
     ./network.nix
     ./sound.nix
     ./typography.nix
+    ./users.nix
   ];
 
   # Configure console keymap
