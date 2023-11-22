@@ -8,7 +8,7 @@
   imports = [
     # Include the results of the hardware scan.
     /etc/nixos/hardware-configuration.nix
-    ./almino/hidden-user.nix
+    ./almino
     ./este-pc
     ./apps.nix
     ./gnome.nix
