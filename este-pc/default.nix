@@ -1,3 +1,4 @@
+# https://github.com/evanjs/nixos_cfg/blob/4bb5b0b84a221b25cf50853c12b9f66f0cad3ea4/config/new-modules/default.nix#L1C1-L27C28
 { lib, ... }:
 
 with lib;
