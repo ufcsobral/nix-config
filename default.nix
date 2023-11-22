@@ -8,7 +8,7 @@
   imports = [
     # Include the results of the hardware scan.
     /etc/nixos/hardware-configuration.nix
-    ./almino
+    ./almino/hidden-user.nix
     ./este-pc
     ./apps.nix
     ./gnome.nix
@@ -76,11 +76,6 @@
     xautolock.time = lib.mkDefault 1;
     xkbVariant = "";
   };
-
-  # https://nixos.org/manual/nixos/stable/options#opt-system.activationScripts
-  # system.activationScripts = {
-  #   visitante = "passwd -d visitante";
-  # };
 
   # https://nixos.org/manual/nixos/stable/#sec-upgrading-automatic
   system.autoUpgrade.enable = lib.mkDefault true;
