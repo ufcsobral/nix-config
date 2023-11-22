@@ -28,8 +28,9 @@
       visitante = {
         description = "Visitante";
         extraGroups = groups;
-        initialHashedPassword = password;
+        # initialHashedPassword = password;
         isNormalUser = true;
+        password = "";
       };
     };
 }
